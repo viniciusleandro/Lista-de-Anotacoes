@@ -1,0 +1,79 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #785FEE;
+}
+main{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    overflow: hidden;
+}
+.imagem{
+    width: 50%;
+    text-align: center;
+}
+.log{
+    width: 300px;
+    height: 200px;
+    margin-top: 200px;
+}
+.imagem div{
+    color: white;
+    margin: 0 auto;
+    width: 700px;
+    margin-top: 30px;
+}
+.imagem p{
+    font-size: 30px;
+    margin-top: 40px;
+}
+.imagem h2{
+    font-size: 50px;
+}
+.login{
+    width: 50%;
+    display: flex;
+    align-items: center;
+    background-color: white;
+    border-radius: 50px;
+}
+.formulario{
+    width: 500px;
+    margin: 0 auto;
+}
+.lc{
+    display: flex;
+    gap: 40px;
+    margin: 40px 0;
+    color: #785FEE;
+    font-weight: bold;
+}
+.lc p{
+    border-bottom: 2px solid #785FEE;
+}
+.entrar{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+}
+.entrar input{
+    border: none;
+    border-bottom: 1px solid rgb(0, 0, 0);
+    background: none;
+    padding: 15px 0;
+    font-size: 15px;
+    width: 100%;
+    margin-top: 20px;
+}
+form button{
+    width: 100%;
+    height: 40px;
+    margin-top: 10px;
+    background-color: rgb(65, 174, 65);
+    border: none;
+    border-radius: 5px;
+}
