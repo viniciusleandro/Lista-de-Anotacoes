@@ -15,16 +15,18 @@ main{
 .imagem{
     width: 50%;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 .log{
     width: 300px;
     height: 200px;
-    margin-top: 200px;
+    margin-top: 20%;
 }
 .imagem div{
     color: white;
-    margin: 0 auto;
-    width: 700px;
+    width: 70%;
     margin-top: 30px;
 }
 .imagem p{
@@ -39,7 +41,6 @@ main{
     display: flex;
     align-items: center;
     background-color: white;
-    border-radius: 50px;
 }
 .formulario{
     width: 500px;
@@ -49,11 +50,16 @@ main{
     display: flex;
     gap: 40px;
     margin: 40px 0;
-    color: #785FEE;
     font-weight: bold;
+    cursor: pointer;
 }
-.lc p{
-    border-bottom: 2px solid #785FEE;
+.lc a{
+    text-decoration: none;
+    list-style: none;
+    list-style-type: none;
+}
+a:visited{
+    color: black;
 }
 .entrar{
     width: 100%;
@@ -68,6 +74,7 @@ main{
     font-size: 15px;
     width: 100%;
     margin-top: 20px;
+    outline: none;
 }
 form button{
     width: 100%;
@@ -76,4 +83,8 @@ form button{
     background-color: rgb(65, 174, 65);
     border: none;
     border-radius: 5px;
+    color: white;
+    cursor: pointer;
 }
+
+/* pagina cadastro*/

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style/cadastro.css">
+    <title>Document</title>
+</head>
+<body>
+    <main>
+        <div class="imagem">
+                <img src="./imgs/login.png" alt="" class="log">
+                <div>
+                <h2>Seja bem vindo</h2>
+                <p>Acesse ou Cadastre-se e aproveite todo o conteudo, Somos uma equipe profissional, emprenhada para trazer os melhores conteudo para vocês usuarios</p>
+                </div>
+        </div>
+        <div class="login">
+            <div class="formulario">
+                <div class="lc">
+                    <a href="./login.html" >ENTRAR</a>
+                    <a href="./cadastro.html" style="color: #785FEE; border-bottom: 2px solid;">CADASTRO</a>
+                </div>
+                <div class="box">
+                    <form>
+                            <div class="inputBox">
+                                <input type="text" name="nome" id="nome" class="inputUser" required>
+                                <label for="nome" class="labelInput">Nome Completo</label>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="text" name="email" id="email" class="inputUser" required>
+                                <label for="email" class="labelInput">Email</label>
+                            </div>
+                            <br>
+                            <div class="inputBox">
+                                <input type="tel" name="Telefone" id="telefone" class="inputUser" required>
+                                <label for="Telefone" class="labelInput">Telefone</label>
+                            </div>
+                            <br>
+                            <p>sexo</p><br>
+                            <input type="radio" name="genero" id="masculino" value="masculino" required>
+                            <label for="masculino">Masculino</label>
+                            <br>
+                            <input type="radio" name="genero" id="feminino" value="feminino" required>
+                            <label for="feminino">Feminino</label>
+                            <br>
+                            <input type="radio" name="genero" id="outro" value="outro" required>
+                            <label for="outro">Outro</label>
+                            <br><br>
+                            <div class="inputBox">
+                                <input type="password" name="senha" id="senha" class="inputUser" required>
+                                <label for="senha" class="labelInput">Digite a senha</label>
+                            </div>
+                            <input type="submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
