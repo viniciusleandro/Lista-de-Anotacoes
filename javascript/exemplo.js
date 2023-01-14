@@ -1,5 +1,5 @@
 
-//CADASTRAR USUARIO
+//CADASTRAR USUARIOa
 // let arrayUsuario = [];
 
 const registerForm = document.getElementById("registerForm");
