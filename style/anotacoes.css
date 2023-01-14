@@ -1,0 +1,46 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+/* header */
+header{
+    width: 100%;
+    background-color: #785FEE;
+    color: white;
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+header div{
+    margin: 0 auto;
+}
+header h2{
+    font-size: 30px;
+}
+/* termino do header */
+/* main */
+.cadastro{
+    width: 100%;
+}
+.text h2{
+    font-size: 40px;
+    padding-left: 30px;
+}
+.anotacoes{
+    width: 100%;
+    display: flex;
+    padding: 30px;
+}
+.anotacoes input[type=text]{
+    flex: 1;
+    height: 40px;
+}
+.anotacoes button{
+    width: 80px;
+    background-color: rgb(65, 174, 65);
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+/* final do main */
