@@ -1,7 +1,8 @@
 const registerForm = document.getElementById("formu");
 let arrayUsuario = JSON.parse(localStorage.getItem("arrayUsuario")) || [];
 
-registerForm.addEventListener('submit',()=>{
+registerForm.addEventListener('submit',(evento)=>{
+  evento.preventDefault()
     let nomeCompleto = document.querySelector('input[name=nome]')
     let textoNome = nomeCompleto.value;
     let email = document.querySelector('input[name=email]')
@@ -21,13 +22,14 @@ registerForm.addEventListener('submit',()=>{
     if (emailExiste) {
         return alert("email ja existe")
     }
-    arrayUsuario.push({
+    let usuarioobject ={
         nome: textoNome,
         email: textoemail,
         telefone: textoTelefone,
         sexo: textoSexo,
         senha: textoSenha
-    });
+    };
+    arrayUsuario.push(usuarioobject)
     if (localStorage.getItem("items") === null) {
         array_json = JSON.stringify(arrayUsuario);
         //----------------------------//chave, valor

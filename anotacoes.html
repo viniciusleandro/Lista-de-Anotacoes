@@ -23,11 +23,35 @@
                 </h2>
             </div>
             <div class="anotacoes">
-                <input type="text" placeholder="Descrição">
-                <input type="text" placeholder="Detalhamento">
-                <button>Salvar</button>
+                <input type="text" placeholder="Descrição" id="description">
+                <input type="text" placeholder="Detalhamento" id="detalhe">
+                <button id="salvar">Salvar</button>
             </div>
         </div>
+        <div class="table">
+            <table>
+                <thead>
+                    <tr>
+                        <th>#</th>
+                        <th>Descrição</th>
+                        <th>Detalhamento</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-contatos">
+                    <!-- <tr>
+                        <td>1</td>
+                        <td>Joao</td>
+                        <td>519999</td>
+                        <td>
+                            <button>Apagar</button>
+                            <button>Editar</button>
+                        </td>
+                    </tr> -->
+                </tbody>
+            </table>
+        </div>
     </main>
+    <script src="./javascript/anotacoes.js"></script>
 </body>
 </html>

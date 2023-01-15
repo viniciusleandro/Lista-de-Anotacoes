@@ -44,3 +44,13 @@ header h2{
     border-radius: 5px;
 }
 /* final do main */
+/* 
+    inicio da estilização da tabble
+*/
+table{
+    width: 100%;
+    text-align: center;
+}
+table td{
+    margin-top: 100px;
+}
