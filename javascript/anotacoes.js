@@ -1,5 +1,4 @@
 let userlogado = JSON.parse(localStorage.getItem('usuarioLogado'))
-console.log(userlogado)
 document.addEventListener('DOMContentLoaded', () => {
     if(!userlogado){
         window.location.href = './login.html'
@@ -18,9 +17,13 @@ botao.addEventListener('click', () =>{
         <td>${detalhamento}</td>
         <td>
             <button class="editar">Editar</button>
-            <button class="apagar">Apagar</button>
+            <button class="apagar" onclick=''>Apagar</button>
         </td>
         </tr>
     `
+    
 })
 
+function deletar(param){
+    console.log(param)
+}

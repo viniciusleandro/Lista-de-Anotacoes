@@ -37,7 +37,8 @@ registerForm.addEventListener('submit',(evento)=>{
         email: textoemail,
         telefone: textoTelefone,
         sexo: textoSexo,
-        senha: textoSenha
+        senha: textoSenha,
+        recados: []
     };
     arrayUsuario.push(usuarioobject)
     if (localStorage.getItem("items") === null) {
