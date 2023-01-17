@@ -16,10 +16,20 @@ registerForm.addEventListener('submit',(evento)=>{
 
     let nomeExiste = arrayUsuario.some((valor)=> valor.nome == textoNome)
     if (nomeExiste) {
+      nomeCompleto.value = ''
+      email.value = ''
+      telefone.value = ''
+      sexo.value = ''
+      senha.value = ''
         return alert("usuario ja existe")
     }
     let emailExiste = arrayUsuario.some((valor)=> valor.email == textoemail)
     if (emailExiste) {
+      nomeCompleto.value = ''
+      email.value = ''
+      telefone.value = ''
+      sexo.value = ''
+      senha.value = ''
         return alert("email ja existe")
     }
     let usuarioobject ={
@@ -42,9 +52,11 @@ registerForm.addEventListener('submit',(evento)=>{
           JSON.stringify([JSON.parse(localStorage.getItem("items")), array_json])
         );
       }
-    // salvarStorage()
+      alert("usuario criado com sucesso")
+      window.location.href = './login.html'
+      nomeCompleto.value = ''
+      email.value = ''
+      telefone.value = ''
+      sexo.value = ''
+      senha.value = ''
 })
-
-// function salvarStorage(){
-//     localStorage.setItem('list', JSON.stringify(arrayUsuario))
-// }

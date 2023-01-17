@@ -1,24 +1,24 @@
-let userlogado = localStorage.getItem('usuarioLogado')
-
+let userlogado = JSON.parse(localStorage.getItem('usuarioLogado'))
+console.log(userlogado)
 document.addEventListener('DOMContentLoaded', () => {
     if(!userlogado){
         window.location.href = './login.html'
     }
 })
-
+let texto = document.getElementById('user').innerText = `${userlogado.nome}`
 let botao = document.getElementById('salvar')
 const tbody = document.getElementById('lista-contatos')
 botao.addEventListener('click', () =>{
     let descricao = document.getElementById('description').value
     let detalhamento = document.getElementById('detalhe').value
     tbody.innerHTML += `
-            <tr>
+        <tr>
         <td>#</td>
         <td>${descricao}</td>
         <td>${detalhamento}</td>
         <td>
-            <button>Apagar</button>
-            <button>Editar</button>
+            <button class="editar">Editar</button>
+            <button class="apagar">Apagar</button>
         </td>
         </tr>
     `
