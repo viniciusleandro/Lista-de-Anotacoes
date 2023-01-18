@@ -15,8 +15,8 @@ registerForm.addEventListener('submit',(evento)=>{
     if (jsonTarefa = localStorage.getItem('arrayUsuario') == null) {
         emailf.value = ''
         senhaf.value = ''
-       confirm("Dados inválidos, Deseja se cadastrar?")
-       if (confirm) {
+       let dados = confirm("Dados inválidos, Deseja se cadastrar?")
+       if (dados) {
         return window.location.href = './cadastro.html'
        }
     }
@@ -29,6 +29,8 @@ registerForm.addEventListener('submit',(evento)=>{
         confirm("Dados inválidos, Deseja se cadastrar?")
         emailf.value = ''
         senhaf.value = ''
+        trocarpagina()
+        return window.location.href = './cadastro.html'
     }
 })
 function trocarpagina(){
