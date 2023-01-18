@@ -85,6 +85,7 @@ tbody tr td{
     background-color: rgb(108, 190, 108);
     color: white;
     cursor: pointer;
+    font-size: 15px;
 }
 .apagar{
     width: 60px;
@@ -94,4 +95,5 @@ tbody tr td{
     background-color: rgb(242, 62, 62);
     color: white;
     cursor: pointer;
+    font-size: 15px;
 }

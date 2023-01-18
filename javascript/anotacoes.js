@@ -1,4 +1,6 @@
 let userlogado = JSON.parse(localStorage.getItem('usuarioLogado'))
+var usuarios = JSON.parse(localStorage.getItem('arrayUsuario'));
+console.log(usuarios)
 document.addEventListener('DOMContentLoaded', () => {
     if(!userlogado){
         window.location.href = './login.html'
@@ -7,23 +9,72 @@ document.addEventListener('DOMContentLoaded', () => {
 let texto = document.getElementById('user').innerText = `${userlogado.nome}`
 let botao = document.getElementById('salvar')
 const tbody = document.getElementById('lista-contatos')
-botao.addEventListener('click', () =>{
+
+function adddescricao(){
     let descricao = document.getElementById('description').value
     let detalhamento = document.getElementById('detalhe').value
-    tbody.innerHTML += `
-        <tr>
-        <td>#</td>
-        <td>${descricao}</td>
-        <td>${detalhamento}</td>
-        <td>
-            <button class="editar">Editar</button>
-            <button class="apagar" onclick=''>Apagar</button>
-        </td>
-        </tr>
-    `
-    
-})
-
-function deletar(param){
-    console.log(param)
+    const novodetalhe = {
+        descricao: descricao,
+        detalhe: detalhamento
+    }
+    userlogado.recados.push(novodetalhe)
+    renderTable()
+    salvarStorage()
+    console.log(userlogado)
 }
+
+function salvarStorage(){
+    localStorage.setItem('usuarioLogado', JSON.stringify(userlogado))
+    const usuario1 = usuarios.findIndex((value) => value.nome === userlogado.nome)
+        usuarios[usuario1] = userlogado
+        localStorage.setItem('arrayUsuario', JSON.stringify(usuarios))
+}
+
+function renderTable() {
+    tbody.innerHTML = "";
+    userlogado.recados.map((user, index) => {
+      const tr = document.createElement("tr");
+      const td1 = document.createElement("td");
+      const td2 = document.createElement("td");
+      const td3 = document.createElement("td");
+      const td4 = document.createElement("td");
+      const deleteButton = document.createElement("button");
+      const EditButton = document.createElement("button");
+
+      tr.setAttribute("class", "tr-style");
+      deleteButton.setAttribute("onClick", `deletar(${index})`);
+      EditButton.setAttribute("onClick", `editar(${index})`);
+    deleteButton.setAttribute('class', 'apagar')
+    EditButton.setAttribute('class', 'editar')
+      tr.appendChild(td1);
+      tr.appendChild(td2);
+      tr.appendChild(td3);
+      tr.appendChild(td4);
+      td4.appendChild(deleteButton);
+      td4.appendChild(EditButton);
+
+      td1.innerHTML = index + 1;
+      td2.innerHTML = user.descricao;
+      td3.innerHTML = user.detalhe;
+      deleteButton.innerHTML = "Delete";
+      EditButton.innerHTML = "Edit";
+      tbody.appendChild(tr);
+    });
+  }
+renderTable()
+function deletar(index) {
+    userlogado.recados.splice(index, 1);
+    renderTable();
+    salvarStorage();
+  }
+
+  function editar(index) {
+    console.log(index)
+    const descricao = prompt("Digite seu descrição");
+    const detalhe = prompt("Digite seu detalhe");
+
+    userlogado.recados[index].descricao = descricao;
+    userlogado.recados[index].detalhe = detalhe;
+    renderTable();
+    salvarStorage();
+  }
