@@ -76,6 +76,7 @@ tbody tr td{
     color: black;
     padding: 5px;
     font-size: 1.2rem;
+    word-break: break-all;
 }
 .editar{
     width: 60px;
@@ -96,4 +97,16 @@ tbody tr td{
     color: white;
     cursor: pointer;
     font-size: 15px;
+}
+#sairr{
+    position: fixed;
+    right: 0;
+    height: 30px;
+    width: 50px;
+    color: red;
+    background-color: rgb(206, 249, 206);
+    border: none;
+    border-radius: 5px;
+    font-size: 17px;
+    cursor: pointer;
 }

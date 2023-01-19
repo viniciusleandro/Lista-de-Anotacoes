@@ -13,13 +13,21 @@ const tbody = document.getElementById('lista-contatos')
 function adddescricao(){
     let descricao = document.getElementById('description').value
     let detalhamento = document.getElementById('detalhe').value
+    console.log(detalhamento)
+    if (descricao == "") {
+      return alert("Coloque uma descrição")
+    }
     const novodetalhe = {
         descricao: descricao,
         detalhe: detalhamento
     }
     userlogado.recados.push(novodetalhe)
-    renderTable()
-    salvarStorage()
+    renderTable();
+    salvarStorage();
+    let descricao1 = document.getElementById('description')
+    let detalhamento2 = document.getElementById('detalhe')
+    descricao1.value = ''
+    detalhamento2.value = ''
     console.log(userlogado)
 }
 
@@ -77,4 +85,9 @@ function deletar(index) {
     userlogado.recados[index].detalhe = detalhe;
     renderTable();
     salvarStorage();
+  }
+
+  function sair(){
+    localStorage.removeItem('usuarioLogado')
+    window.location.href = './login.html'
   }

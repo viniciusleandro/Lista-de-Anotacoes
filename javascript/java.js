@@ -13,6 +13,11 @@ registerForm.addEventListener('submit',(evento)=>{
     let textoSexo = sexo.value;
     let senha= document.querySelector('input[name=senha]')
     let textoSenha = senha.value;
+    let senha2 = document.querySelector('input[name=senha2]')
+    let textoSenha2 = senha2.value;
+  if (textoSenha != textoSenha2) {
+    return alert("Senhas não conferem ")
+  }
 
     let nomeExiste = arrayUsuario.some((valor)=> valor.nome == textoNome)
     if (nomeExiste) {

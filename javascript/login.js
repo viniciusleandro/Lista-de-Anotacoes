@@ -11,7 +11,7 @@ registerForm.addEventListener('submit',(evento)=>{
     let email = document.getElementById("email").value
     let senhaf = document.getElementById("password")
     let senha = document.getElementById("password").value
-    //verificar com o tech helper como eu faço quando retorna nulo no find
+
     if (jsonTarefa = localStorage.getItem('arrayUsuario') == null) {
         emailf.value = ''
         senhaf.value = ''
@@ -26,11 +26,12 @@ registerForm.addEventListener('submit',(evento)=>{
         localStorage.setItem('usuarioLogado', JSON.stringify(usuarioEncontrado))
         trocarpagina()
     } else {
-        confirm("Dados inválidos, Deseja se cadastrar?")
+        let aceitar = confirm("Dados inválidos, Deseja se cadastrar?")
         emailf.value = ''
         senhaf.value = ''
-        trocarpagina()
-        return window.location.href = './cadastro.html'
+        if (aceitar) {
+            return window.location.href = './cadastro.html' 
+        }
     }
 })
 function trocarpagina(){
