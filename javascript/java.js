@@ -1,4 +1,4 @@
-const registerForm = document.getElementById("formu");
+const registerForm = document.getElementById("forms");
 let arrayUsuario = JSON.parse(localStorage.getItem("arrayUsuario")) || [];
 
 registerForm.addEventListener('submit',(evento)=>{
@@ -9,12 +9,11 @@ registerForm.addEventListener('submit',(evento)=>{
     let textoemail = email.value;
     let telefone = document.querySelector('input[name=telefone]')
     let textoTelefone = telefone.value;
-    let sexo = document.querySelector('input[name=genero]:checked')
-    let textoSexo = sexo.value;
     let senha= document.querySelector('input[name=senha]')
     let textoSenha = senha.value;
     let senha2 = document.querySelector('input[name=senha2]')
     let textoSenha2 = senha2.value;
+    console.log(textoNome,textoSenha, textoTelefone,textoemail)
   if (textoSenha != textoSenha2) {
     return alert("Senhas não conferem ")
   }
@@ -41,7 +40,6 @@ registerForm.addEventListener('submit',(evento)=>{
         nome: textoNome,
         email: textoemail,
         telefone: textoTelefone,
-        sexo: textoSexo,
         senha: textoSenha,
         recados: []
     };
@@ -63,6 +61,5 @@ registerForm.addEventListener('submit',(evento)=>{
       nomeCompleto.value = ''
       email.value = ''
       telefone.value = ''
-      sexo.value = ''
       senha.value = ''
 })

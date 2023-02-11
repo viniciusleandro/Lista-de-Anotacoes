@@ -4,7 +4,7 @@
     padding: 0;
 }
 /* header */
-header{
+/* header{
     width: 100%;
     background-color: #785FEE;
     color: white;
@@ -17,10 +17,10 @@ header div{
 }
 header h2{
     font-size: 30px;        
-}
+} */
 /* termino do header */
 /* main */
-.cadastro{
+/* .cadastro{
     width: 100%;
     margin-top: 30px;
 }
@@ -53,12 +53,12 @@ header h2{
     border: none;
     cursor: pointer;
     border-radius: 5px;
-}
+} */
 /* final do main */
 /* 
     inicio da estilização da tabble
 */
-table{
+/* table{
     width: 80%;
     text-align: center;
     margin: 0 auto;
@@ -98,6 +98,7 @@ tbody tr td{
     cursor: pointer;
     font-size: 15px;
 }
+*/
 #sairr{
     position: fixed;
     right: 0;
@@ -109,4 +110,28 @@ tbody tr td{
     border-radius: 5px;
     font-size: 17px;
     cursor: pointer;
+}
+#salvar{
+    border-radius: 5px;
+    width: 150px;
+    height: 30px;
+    background-color: #b7a9f8;
+    font-weight: bold;
+}
+.my-5{
+    font-size: 25px;
+}
+i{
+    cursor: pointer;
+}
+@media (max-width: 767px) {
+    li{
+        text-align: center;
+    }
+    .wrap{
+        justify-content: center;
+    }
+    .margin{
+        margin-bottom: 20px;
+    }
 }
