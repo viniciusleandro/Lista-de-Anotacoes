@@ -2,7 +2,6 @@
 var usuarios = JSON.parse(localStorage.getItem('arrayUsuario'));
 
 let jsonTarefa =  localStorage.getItem('arrayUsuario');
-
 let tarefa = JSON.parse(jsonTarefa);
 const registerForm = document.getElementById("forms");
 registerForm.addEventListener('submit',(evento)=>{
@@ -36,3 +35,4 @@ registerForm.addEventListener('submit',(evento)=>{
 function trocarpagina(){
     window.location.href = './anotacoes.html'
 }
+

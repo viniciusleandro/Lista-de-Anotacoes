@@ -135,3 +135,16 @@ i{
         margin-bottom: 20px;
     }
 }
+
+.edit:hover{
+    color: green;
+    transition: 0.5s;
+}
+.delete:hover{
+    color: red;
+    transition: 0.5s;
+}
+#description, #detalhe{
+    border: none;
+    border-bottom: 1px solid black;
+}

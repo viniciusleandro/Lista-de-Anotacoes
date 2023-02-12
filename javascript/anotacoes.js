@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
         window.location.href = './login.html'
     }
 })
-// let texto = document.getElementById('user').innerText = `${userlogado.nome}`
+let texto = document.getElementById('user').innerText = `Bem vindo ${userlogado.nome} a sua lista de anotaçoes`
 let botao = document.getElementById('salvar')
 const tbody = document.getElementById('list-todo')
 
@@ -40,12 +40,11 @@ function renderTable() {
   tbody.innerHTML = ''
   userlogado.recados.map((element, index) => {
     tbody.innerHTML += `              <li class="list-group-item d-flex justify-content-between fs-5 row">
-    <div class="col-12 col-xl-5 col-md-5">${element.descricao}</div>
-    <div class="col-12 col-xl-5 col-md-5">${element.detalhe} </div>
+    <div class="col-12 col-xl-5 col-md-5">descrição: ${element.descricao}</div>
+    <div class="col-12 col-xl-5 col-md-5">detalhamento: ${element.detalhe} </div>
   <div class="d-flex gap-3 col-12 col-xl-2 col-md-2 wrap align-items-center">
-    <i class="bi bi-pencil" onClick="editar(${index})"></i>
-        <i class="bi bi-bookmark-check"></i>
-        <i class="bi bi-trash3" onClick="deletar(${index})"></i>
+    <i class="bi bi-pencil edit" onClick="editar(${index})"></i>
+        <i class="bi bi-trash3 delete" onClick="deletar(${index})"></i>
   </div>
   </li>`
 });

@@ -17,7 +17,9 @@ registerForm.addEventListener('submit',(evento)=>{
   if (textoSenha != textoSenha2) {
     return alert("Senhas não conferem ")
   }
-
+  if(textoNome == '' || textoemail == '' || textoTelefone =='' || textoSenha ==''){
+    return alert('existem campos vazios')
+  }
     let nomeExiste = arrayUsuario.some((valor)=> valor.nome == textoNome)
     if (nomeExiste) {
       nomeCompleto.value = ''
